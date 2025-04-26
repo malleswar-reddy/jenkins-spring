@@ -29,6 +29,7 @@ class ProductControllerTest {
         mockProduct.setId(productId);
         mockProduct.setName("Test Product");
 
+        // Mock the service call
         Mockito.when(productService.getProductById(productId)).thenReturn(mockProduct);
 
         // Act
