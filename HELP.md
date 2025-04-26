@@ -22,3 +22,13 @@ While most of the inheritance is fine, it also inherits unwanted elements like `
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
+### Running the application
+```shell
+git clone https://github.com/malleswar-reddy/jenkins spring.git
+cd jenkins spring
+git checkout devlop
+echo "Test JaCoCo" >> README.md
+git add README.md
+git commit -m "Test coverage report"
+git push origin devlop
+```
