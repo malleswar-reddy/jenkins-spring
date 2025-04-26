@@ -106,6 +106,10 @@
 				<groupId>org.openclover</groupId>
 				<artifactId>clover-maven-plugin</artifactId>
 				<version>4.5.2</version>
+				<configuration>
+					<generateHtml>true</generateHtml>
+					<generateXml>true</generateXml>
+				</configuration>
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>
@@ -124,5 +128,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
