@@ -103,23 +103,21 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<formats>
-						<format>html</format>
-						<format>xml</format>
-					</formats>
-					<check>
-						<haltOnFailure>false</haltOnFailure>
-					</check>
-				</configuration>
+				<groupId>org.openclover</groupId>
+				<artifactId>clover-maven-plugin</artifactId>
+				<version>4.5.2</version>
 				<executions>
 					<execution>
-						<phase>test</phase>
+						<phase>generate-sources</phase>
 						<goals>
-							<goal>cobertura</goal>
+							<goal>instrument</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>clover-report</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>clover</goal>
 						</goals>
 					</execution>
 				</executions>
